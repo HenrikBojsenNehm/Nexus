@@ -3,5 +3,24 @@
 
 
 {% block content %}
-    <h3>Cart</h3>
+    <div class='grid grid-cols-1 w-full place-items-center mt-16 gap-y-16'>
+        <h1>Your Cart</h1>
+        <div class='w-3/4'>
+            <div class='box-element my-8'>
+                <table class='table-auto'>
+                    <tr>
+                        <th><h5>Items: <strong>5</strong></h5></th>
+                        <th><h5>Total: <strong>$42</strong></h5></th>
+                        <th>
+                            <a class="float-right m-1 bg-green-600 text-white font-light p-1.5" href="{% url 'checkout' %}">Checkout</a>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class='box-element my-8'>
+
+            </div>
+        </div>
+    </div>
 {% endblock content %}

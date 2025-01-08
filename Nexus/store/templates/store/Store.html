@@ -2,6 +2,49 @@
 {% load static %}
 
 {% block content %}
-    <h3 class='text-4xl text-red-600'>Store</h3>
+    <div class='grid grid-cols-3 w-full place-items-center mt-16 gap-y-16'>
+        <div>
+            <img class='thumbnail' src="{% static 'images/placeholder.png' %}">
+            <div class='box-element product'>
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button  class="border-2 px-3 py-1 mx-0.5 mt-3">Add to Cart</button>
+		        <a class="border-2 px-3 py-1 mx-0.5 mt-3" href="#">View</a>
+		        <h4 class='inline-block float-right mt-3.5'><strong>$20</strong></h4>
+            </div>
+        </div>
+
+        <div>
+            <img class='thumbnail' src="{% static 'images/placeholder.png' %}">
+            <div class='box-element product'>
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button class="border-2 px-3 py-1 mx-0.5 mt-3">Add to Cart</button>
+		        <a class="border-2 px-3 py-1 mx-0.5 mt-3" href="#">View</a>
+		        <h4 class='inline-block float-right mt-3.5'><strong>$15</strong></h4>
+            </div>
+        </div>
+
+        <div>
+            <img class='thumbnail' src="{% static 'images/placeholder.png' %}">
+            <div class='box-element product'>
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button class="border-2 px-3 py-1 mx-0.5 mt-3">Add to Cart</button>
+		        <a class="border-2 px-3 py-1 mx-0.5 mt-3" href="#">View</a>
+		        <h4 class='inline-block float-right mt-3.5'><strong>$30</strong></h4>
+            </div>
+        </div>
+
+        <div>
+            <img class='thumbnail' src="{% static 'images/placeholder.png' %}">
+            <div class='box-element product'>
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button class="border-2 px-3 py-1 mx-0.5 mt-3">Add to Cart</button>
+		        <a class="border-2 px-3 py-1 mx-0.5 mt-3" href="#">View</a>
+		        <h4 class='inline-block float-right mt-3.5'><strong>$30</strong></h4>
+            </div>
+        </div>
 {% endblock content %}
     

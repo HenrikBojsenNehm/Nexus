@@ -6,15 +6,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus</title>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     {% tailwind_css %}
 </head>
 <body>
-    <h3>navbar placeholder</h3>
-    <hr>
-
+    
+    {% block navbar %}
+        <nav class='flex-nowrap relative flex w-full items-center justify-between py-2 border-b border-black'>
+            <div class='flex w-full flex-wrap items-center justify-between px-3'>
+                {% comment %} Hamburger for mobile {% endcomment %}
+                {% comment %} <button
+                class='block border-0 bg-transparent px-2 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0'
+                type='button'
+                @click="open = !open"
+                >
+                    <div class="grid justify-items-center gap-1">
+                        <span class="h-0.5 w-6 bg-black transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                        <span class="h-0.5 w-6 bg-black transform transition duration-500 ease-in-out" :class="{'opacity-0': open }"></span>
+                        <span class="h-0.5 w-6 bg-black transform transition duration-500 ease-in-out" :class="{'-rotate-45': open,' translate-y-1.5': !open }"></span>
+                    </div>
+                </button> {% endcomment %}
+                <h2 class='pl-6 pr-10'>Nexus</h2>
+                <li class='list-none me-auto'><a href="/">Store</a></li>
+                <div class='justify-end'>
+                    <ul class='list-none me-auto flex flex-row gap-4'>
+                        <li><input
+                            type="Search"
+                            placeholder="Search"
+                            class="border border-black rounded-md px-2 py-0"
+                            ></li>
+                        <li><a href="/cart">Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% endblock navbar %}
 
     <div class='container'>
-        <br>
         {% block content %}
         {% endblock content %}
             
